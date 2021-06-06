@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+        <link href='https://css.gg/games.css' rel='stylesheet'>
+
+
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+        <style>
+            body{
+                margin: 0%;
+                background-image: url(https://cdn.ozone.bg/media/cms/background/panair-na-knigata-fon.jpg);
+                background-repeat: no-repeat;
+                background-position: center 0px;
+                background-attachment: fixed;
+                background-position: 50.5% 0%;
+
+
+            }
+
+            .headerItems{
+                background-color: #1f1f1f;
+                margin: 0%;
+                padding: 1.7% 0%;
+                align-items: center;
+            }
+
+            .ozoneLogo{
+                position: absolute;
+                display: inline;
+                top: 2.2%;
+                left: 19.2%;
+                width:8.65%;
+                height:3.6%;
+            }
+
+            .ozoneLogoTriangle {
+                position: absolute;
+                display: inline;
+                top: 6.2%;
+                left: 19.2%;
+                width: 0; 
+                height: 0; 
+                border-left: 21px solid transparent;
+                border-right: 60px solid transparent;
+                border-top: 14px solid #e9681e;
+                z-index: 1;
+            }
+
+            .underOzoneLogoLeft{
+                position: absolute;
+                display: inline;
+                top: 6.5%;
+                left: 18.5%;
+                width: 0; 
+                height: 0; 
+                border-left: 27px solid transparent;
+                border-right: 66px solid transparent;
+                border-top: 20px solid #1f1f1f;
+            }
+
+            .underOzoneLogoCenter{
+                position: absolute;
+                display: inline;
+                top:6.5%;
+                left: 19.55%;
+                width:174px; 
+                height: 20px; 
+                background-color: #1f1f1f;
+                border-radius: 10px;
+
+            }
+
+            .underOzoneLogoRight{
+                position: absolute;
+                display: inline;
+                top: 6.5%;
+                left: 24.8%;
+                width: 0; 
+                height: 0; 
+                border-left: 66px solid transparent;
+                border-right: 27px solid transparent;
+                border-top: 20px solid #1f1f1f;
+            }
+
+            .underLogoText{
+                position: absolute;
+                display: inline;
+                top: 6.1%;
+                left: 22.9%;
+                color: white;
+                font-family: 'Raleway', sans-serif;
+                font-size: 0.53em;
+                word-spacing: 3px;
+                letter-spacing: 0.5px;
+                transform: scale(1,1.2);
+                z-index: 1;
+            }
+
+            .searchBar{
+                border-radius: 3px 0 0 3px;
+                position: absolute;
+                display: block;
+                left: 33.45%;
+                top: 1.4%;
+                text-decoration: none;
+                cursor:text;
+                width: 24.7%;
+                height: 4.1%;
+                border: none;
+                float: left;
+                padding: 0% 1%;
+                outline: none;
+            }
+
+            .searchBarButton{
+                background-color: #e9681e;
+                color: white;
+                position: absolute;
+                display: block;
+                left: 58.05%;
+                top: 1.4%;
+                width: 2.4%;
+                height: 4.1%;
+                border: none;
+                font-size: 1.5em;
+                border-radius:0 3px 3px 0;
+                cursor: pointer;
+            }
+
+            .searchBarButton button:hover{
+                background-color: rgb(235, 118, 50) ;
+                transition: 0.5s;
+            }
+
+            .searchBarCustomerUser{
+                background-color: transparent;
+                color: white;
+                position: absolute;
+                display: block;
+                left: 66.35%;
+                top: 1.5%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 1.6em;
+                cursor: pointer;
+            }
+
+            .searchBarCustomerHeart{
+                background-color: transparent;
+                color: white;
+                position: absolute;
+                display: block;
+                left: 69.7%;
+                top: 1.5%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 2em;
+                cursor: pointer;
+            }
+
+            .searchBarCart{
+                background-color: transparent;
+                color: white;
+                position: absolute;
+                display: block;
+                left: 73.5%;
+                top: 1.5%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 2.2em;
+                cursor: pointer;
+            }
+
+            .vLine{
+                background-color: white;
+                position: absolute;
+                display: block;
+                left: 76.8%;
+                top: 1.5%;
+                width: 1px;
+                height: 3.6%;
+                border: none;
+                font-size: 2.2em;
+                cursor: pointer;
+            }
+
+            .price{
+                background-color: transparent;
+                color: #e9681e;
+                position: absolute;
+                display: block;
+                left: 77.3%;
+                top: 0%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 2.45em;
+                cursor: pointer;
+                font-family: 'Oswald', sans-serif;
+                float: left;
+            }
+
+            .priceSmall{
+                background-color: transparent;
+                color: #e9681e;
+                position: absolute;
+                display: block;
+                left: 78.5%;
+                top: 1%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 1em;
+                cursor: pointer;
+                font-family: 'Oswald', sans-serif;
+                float: left;
+            }
+
+            .priceCurrency{
+                background-color: transparent;
+                color: white;
+                position: absolute;
+                display: block;
+                left: 78.5%;
+                top: 2.2%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 1.3em;
+                cursor: pointer;
+                font-family: 'Oswald', sans-serif;
+                float: left;
+            }
+            .material-icons{
+                background-color: transparent;
+                color: white;
+                position: absolute;
+                display: block;
+                left: 79.5%;
+                top: 0.6%;
+                width: 2.5%;
+                height: 4.3%;
+                border: none;
+                font-size: 1.7em;
+                cursor: pointer;
+                float: left;
+            }
+
+            .underNavBar{
+                background-color: #444;
+                position: absolute;
+                display: block;
+                left: 18.35%;
+                top: 19.2%;
+                width: 62.5%;
+                height: 4.1%;
+            }
+
+            .burgerButton{
+                position: absolute;
+                display: block;
+                font-size: 1.2em;
+                color: rgb(22, 22, 22);
+                font-weight: 1000;
+                left: 9%;
+                top: 15%;
+                
+            }
+            .underNavBarFirstPart{
+                position: absolute;
+                display: block;
+                background-color: #e9681e;
+                width: 16.6%;
+                height: 100%;
+            }
+
+            .categoryText{
+                position: absolute;
+                display: inline;
+                top: 30%;
+                left: 29.5%;
+                color: rgb(22, 22, 22);
+                font-family: 'Raleway', sans-serif;
+                font-size: 0.8em;  
+                z-index: 1;
+            }
+
+            .underNavBar li{
+                display: inline;
+                margin-right: 4.5%;
+
+            }
+            
+
+            .underNavBarList{
+                position: absolute;
+                color: white;
+                width: 77.5%;
+                top: -1%;
+                left: 19%;
+                font-family: 'Roboto', sans-serif;
+                font-size: 0.79em;
+                transform: scale(1.1,0.99); 
+ 
+                cursor: pointer;
+            }
+
+            .underNavBarList li:hover{
+                color: #e9681e ;
+                transition: 0.5s;
+            }
+
+            .headerItems button:hover{
+                color: #e9681e ;
+                transition: 0.5s;
+            }
+
+            #main{
+                position: absolute;
+                background-color: white;
+                height: 100%;
+                width: 62.5%;
+                left: 18.35%;
+                top: 23.3%;
+            }
+
+            .mainList{
+                list-style: none;
+                position: absolute;
+                width: 16.6%;
+                height: 40%;
+                padding: 0%;
+                margin: 0%;
+                border-bottom: solid;
+                border-right: solid;
+                border-width: thin;
+                border-color: lightgrey;
+            }
+
+            .mainListDiv{
+           
+            }
+
+            .mainList li{
+                margin-top: 0%;
+                padding-left: 10%;
+            }
+
+            .mainListItems a{
+                position: relative;
+                display: inline;
+                text-decoration: none;
+                float: left;
+                width: 100%;
+                
+            }
+
+            .mainListItems h3{
+                float: left;
+                margin: 0%;
+                color: black;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 0.8em;
+                transform: scale(1,1.2);
+            }
+
+
+            .fa-gamepad{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 5%;
+            }
+
+            .fa-book{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 8%;
+                margin-left: 2%;
+            }
+
+            .fa-film{
+                float :left;
+                display: inline;
+                font-size: 1.2em;
+                color: #444;
+                margin-right: 7%;
+                margin-left: 1%;
+            }
+
+            .fa-tshirt{
+                float :left;
+                display: inline;
+                font-size: 1.1em;
+                color: #444;
+                margin-right: 5%;
+            }
+
+            .fa-laptop{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 6%;
+            }
+
+            .fa-play-circle{
+                float :left;
+                display: inline;
+                font-size: 1.2em;
+                color: #444;
+                margin-right: 8%;
+
+            }
+
+            .fa-mobile-alt{
+                float :left;
+                display: inline;
+                font-size: 1.3em;
+                color: #444;
+                margin-right: 9%;
+                margin-left: 2%;
+            }
+
+            .fa-tv{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 6%;
+            }
+
+            .fa-car{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 9%;
+                margin-left: 1%;
+            }
+            .fa-baby-carriage{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 9%;
+                margin-left: 1%;
+            }
+            
+            .fa-puzzle-piece{
+                float :left;
+                display: inline;
+                font-size: 1em;
+                color: #444;
+                margin-right: 7%;
+                margin-left: 2%;
+            }
+
+            .mainListItems:hover  i{
+                color: #e9681e ;
+                transition: 0.5s;
+            }
+
+            .mainListItems h3:hover{
+                color: #e9681e ;
+                transition: 0.5s;
+            }
+
+            .hiddenGamingList{
+                position: absolute;
+                display: none;
+                background-color: white;
+                height: 145%;
+                width: 420%;
+                top: 0%;
+                left :100%;
+                z-index: 1000;
+            }
+            
+            .hiddenGamingList{
+                border: solid lightgrey;
+                border-width: thin;
+            }
+
+            .mainListItems a{
+                padding:5.5%;
+                padding-bottom: 4%;
+                background-color: white;
+                margin: 0%;
+                left: -11%;
+                
+            }
+
+            .mainListItems a:hover{
+                border-bottom: solid lightgrey;
+                border-top: thin lightgray;
+                border-right: thick red;
+                border-width: thin;
+            }
+            
+
+            .gaming:hover+.hiddenGamingList{
+                display: block;
+            }
+            .hiddenGamingList:hover{
+                display: block;
+            }
+
+.mainJumbotron{
+    position: relative;
+    top: 2%;
+    left: 1%;
+}
+
+            * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 65%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dotBox{
+    position: absolute;
+    left: 19%;
+    top: 88%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border: thin solid #e9681e;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #e9681e;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.sideButtonsJumbotron{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top:0%;
+    left:82%;
+    width: 15.5%;
+    height: 95%;
+}
+        </style>
+    </head>
+    <body>
+        <header class="headerItems">
+            
+            <img src="headerLogo.png" class="ozoneLogo"> 
+
+            <div class="ozoneLogoTriangle"></div>
+
+            <div class="underOzoneLogoLeft"></div>
+            <div class="underOzoneLogoCenter"></div>
+            <div class="underOzoneLogoRight"></div>
+            <p class="underLogoText">ИЗИГРАЙ СКУКАТА!</p>
+            
+
+            <form class="searchBarForm" >
+                <input type="text" placeholder="Search..." class="searchBar" > 
+                <button type="submit" class="searchBarButton"><i class="fa fa-search"></i></button>
+            </form>
+
+            
+            <form class="searchBarCustomer" >
+                <button type="submit" class="searchBarCustomerUser"><i class="fa fa-user"></i></button>
+                <button type="submit" class="searchBarCustomerHeart"><i class="fa fa-heart"></i></button>
+            </form>
+
+            <form class="searchBarShopping" >
+                <button type="submit" class="searchBarCart"><i class="fa fa-shopping-cart"></i></button>    
+            </form>
+
+            <span class="vLine"></span>
+
+            <span class="priceItems">
+                <span class="price">0</span>
+                <span class="priceSmall">.00</span>
+                <span class="priceCurrency">лв.</span>
+                <i class="material-icons">keyboard_arrow_down</i>
+            </span>
+
+            <div class="underNavBar">
+                <div class="underNavBarFirstPart">
+                    <span class="burgerButton">&#9776;</span>
+                    <a class="categoryText">КАТЕГОРИИ</a>
+                    <i class="material-icons" style="color: rgb(22, 22, 22); left: 76.5%; top: 15%;">keyboard_arrow_down</i>
+                </div>
+                <ul class="underNavBarList">
+                    <li>НАЙ-НОВИ</li>
+                    <li>РАЗОПАКОВАНИ</li>
+                    <li>ПРОМОЦИИ</li>
+                    <li>НАШИТЕ МАГАЗИНИ</li>
+                </ul>
+                
+            </div>
+
+
+        </header>
+
+        <div id="main">
+            <ul class="mainList">
+                <div class="mainListDiv">
+                <li class="mainListItems">
+                    <a href="" class="gaming">
+                        <i class="fas fa-gamepad"></i>
+                    <span>
+                        <h3>Гейминг</h3>
+                    </span>
+                    </a>
+
+                    <div class="hiddenGamingList">
+
+                    </div>
+                </li>
+
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-book" ></i>
+                    <span>
+                        <h3>Книжарница</h3>
+                    </span>
+                    </a>
+                </li>
+
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-film"></i>
+                    <span>
+                        <h3>Музика и филми</h3>
+                    </span>
+                    </a>
+                </li>
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-tshirt"></i>
+                    <span>
+                        <h3>Мърчандайз</h3>
+                    </span>
+                    </a>
+                </li>
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-laptop"></i>
+                    <span>
+                        <h3>Лаптопи и компютри</h3>
+                    </span>
+                    </a>
+                </li>
+                
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="far fa-play-circle"></i>
+                    <span>
+                        <h3>Аудио и Hi-Fi</h3>
+                    </span>
+                    </a>
+                </li>
+                                
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-mobile-alt"></i>
+                    <span>
+                        <h3>Мобилни устройства</h3>
+                    </span>
+                    </a>
+                </li>
+                                                
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-tv"></i>
+                    <span>
+                        <h3>ТВ, монитори и видео</h3>
+                    </span>
+                    </a>
+                </li>
+                                                                
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-car"></i>
+                    <span>
+                        <h3>Играчки</h3>
+                    </span>
+                    </a>
+                </li>
+                                                                
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-baby-carriage"></i>
+                    <span>
+                        <h3>Майка и бебе</h3>
+                    </span>
+                    </a>
+                </li>
+                                                                
+
+
+                <li class="mainListItems">
+                    <a href="">
+                        <i class="fas fa-puzzle-piece"></i>
+                    <span>
+                        <h3>Пъзели и игри</h3>
+                    </span>
+                    </a>
+                </li>
+                </div>
+            </ul>
+
+            <div class="mainJumbotron">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <img src="https://cdn.ozone.bg/media/slider/image/panair-na-knigata-main.jpg" style="width:100%; border-radius: 5px;">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="https://cdn.ozone.bg/media/slider/image/dennadeteto-main.jpg" style="width:100%; border-radius: 5px;">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="https://cdn.ozone.bg/media/slider/image/funko-week-main.jpg" style="width:100%; border-radius: 5px;">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="https://cdn.ozone.bg/media/slider/image/kupi-3-za-2-main.jpg" style="width:100%; border-radius: 5px;">
+                      </div>
+
+                      <div class="mySlides fade">
+                        <img src="https://cdn.ozone.bg/media/slider/image/bang-i-olfsen-main_2.jpg" style="width:100%; border-radius: 5px;">
+                      </div>
+                    
+                    </div>
+                    <br>
+                    
+                    <div class="dotBox" >
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                      <span class="dot" onclick="currentSlide(4)"></span> 
+                      <span class="dot" onclick="currentSlide(5)"></span> 
+                    </div>
+
+                    <div class="sideButtonsJumbotron">
+                        <div class="JumbotronButton1">
+                            <span>Онлайн панаир на книгата</span>
+                        </div>
+                
+                        <div class="JumbotronButton2">
+                            <span>Ден на детето</span>
+                        </div>
+            
+                        <div class="JumbotronButton3">
+                            <span>Funko week</span>
+                        </div>
+  
+                        <div class="JumbotronButton4">
+                            <span>Купи 3 пъзела, плати 2</span>
+                        </div>
+                    
+                        <div class="JumbotronButton5">
+                            <span>Bang & Olufsen с до -30% отстъпка</span>
+                        </div>
+                    </div>
+            </div>
+        </div>  
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>
